@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        function resetIT() {
+            document.getElementById("btn").value = null;
+        }
+    </script>
+    <title>TODO LIST</title>
+    <style>
+        div {
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        ul.line-through {
+            text-decoration: line-through;
+            color: green;
+        }
+        .bg{
+            background:#fcfff7;
+        }
+
+        .well {
+            background: rgb(22, 105, 173);
+            color: white;
+        }
+
+        .changeText{
+
+            color : white;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <div class="jumbotron text-center changeText">
+        <h1>MY TODO LIST</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="input-group">
+
+            <input class="form-control" placeholder="Enter TODO" type="text" id="addTask">
+
+            <div class="input-group-btn">
+                <button id="btn" class="btn btn-primary btn-md" type="submit"><i
+                        class="glyphicon glyphicon-plus-sign" onclick="resetIT()"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <br>
+        <div class="row content container">
+            <div class="col-sm-4 " id="activeTODO">
+                <div class="well text-center">ACTIVE TODOS</div>
+                <ul class="list-group" id="listActive"></ul>
+            </div>
+
+
+            <div class="col-sm-4 " id="completedTODO">
+                <div class="well text-center">COMPLETED TODOS</div>
+                <ul class="list-group line-through" id="listCompleted"></ul>
+            </div>
+
+
+            <div class="col-sm-4 " id="deletedTODO">
+                <div class="well text-center">DELETED TODOS</div>
+                <ul class="list-group" id="listDeleted"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="todos.js"></script>
+<script src="index.js"></script>
+
+
+</body>
+</html>
